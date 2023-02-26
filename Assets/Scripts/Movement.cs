@@ -3,7 +3,6 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public Rigidbody player;
-    public float movementSpeed = 4000f;
     public float sideSpeed = 500f;
 
     // Update is called once per frame
