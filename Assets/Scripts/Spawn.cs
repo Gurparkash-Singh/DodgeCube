@@ -8,13 +8,22 @@ public class Spawn : MonoBehaviour
     public GameObject end;
     public float timeToSpawn = 2f;
     public float wave = 1f;
+    private bool stop = false;
     
     void Update()
     {
-        if (Time.time >= timeToSpawn)
+        if (!stop)
         {
-            spawnBlock();
-            timeToSpawn = Time.time + wave;
+            if ((Time.time >= 8))
+            {
+                stop = true;
+                Instantiate(end, spawners[0].position, Quaternion.identity);
+            }
+            else if (Time.time >= timeToSpawn)
+            {
+                spawnBlock();
+                timeToSpawn = Time.time + wave;
+            }
         }
     }
 
