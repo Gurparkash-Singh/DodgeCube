@@ -18,4 +18,14 @@ public class Movement : MonoBehaviour
             player.AddForce(sideSpeed * Time.deltaTime, 0, 0);
         }
     }
+
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        Debug.Log(collisionInfo.collider.tag);
+    }
+
+    void OnTriggerEnter (Collider col)
+    {
+        Debug.Log(col.tag);
+    }
 }
