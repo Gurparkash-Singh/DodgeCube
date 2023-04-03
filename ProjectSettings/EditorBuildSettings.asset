@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Over Screen.unity
     guid: 3ac8bff5b33f1f8479a49841937a1f67
+  - enabled: 1
+    path: Assets/Scenes/options.unity
+    guid: a0c3e3089ae4a1f4ab7e2d7d1ce2f13c
   m_configObjects: {}

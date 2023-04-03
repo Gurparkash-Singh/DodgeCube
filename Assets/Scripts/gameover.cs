@@ -14,4 +14,8 @@ public class gameover : MonoBehaviour
     {
      Application.Quit();
     }
+    public void levelselectionmenu()
+    {
+        SceneManager.LoadScene("Level Select");
+    }
 }
