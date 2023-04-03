@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public Transform player;
-    public Vector3 offset;
+    [SerializeField] private Transform player;
+    [SerializeField] private Vector3 offset;
 
     // Update is called once per frame
     void Update()

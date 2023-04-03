@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class EndMovement : MonoBehaviour
 {
-    public Rigidbody end;
-    public float forwardSpeed = 1000f;
+    [SerializeField] private Rigidbody end;
+    [SerializeField] private float forwardSpeed = 1000f;
 
     void FixedUpdate()
     {

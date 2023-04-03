@@ -2,19 +2,30 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
+    public static int level = 1;
 
-    public Transform[] spawners;
-    public GameObject enemy;
-    public GameObject end;
-    public float timeToSpawn = 2f;
-    public float wave = 1f;
     private bool stop = false;
+    private float time;
+    private float endTime;
+    
+
+    [SerializeField] private Transform[] spawners;
+    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject end;
+    [SerializeField] private float timeToSpawn = 2f;
+    [SerializeField] private float wave = 1f;
+    
+    void Start()
+    {
+        time = Time.time;
+        endTime = time + (8 * level);
+    }
     
     void Update()
     {
         if (!stop)
         {
-            if ((Time.time >= 8))
+            if (Time.time > endTime)
             {
                 stop = true;
                 Instantiate(end, spawners[0].position, Quaternion.identity);

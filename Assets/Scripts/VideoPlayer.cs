@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class VideoPlayer : MonoBehaviour
 {
-    public Transform Player;
-    public Vector3 offset;
+    [SerializeField] private Transform Player;
+    [SerializeField] private Vector3 offset;
 
     // Update is called once per frame
     void Update()

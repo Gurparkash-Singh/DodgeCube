@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,10 +7,11 @@ public class gameover : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+    
     // Update is called once per frame
     public void quitg()
     {
-     Application.Quit();
+        Application.Quit();
     }
     public void levelselectionmenu()
     {
