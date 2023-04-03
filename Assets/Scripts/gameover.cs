@@ -7,7 +7,7 @@ public class gameover : MonoBehaviour
 {
     public void restart()
     {
-        SceneManager.LoadScene("MENU");
+        SceneManager.LoadScene("SampleScene");
     }
     // Update is called once per frame
     public void quitg()
@@ -17,5 +17,9 @@ public class gameover : MonoBehaviour
     public void levelselectionmenu()
     {
         SceneManager.LoadScene("Level Select");
+    }
+    public void optionsmenu()
+    {
+        SceneManager.LoadScene("options");
     }
 }

@@ -29,3 +29,4 @@ public class Movement : MonoBehaviour
         Debug.Log(col.tag);
     }
 }
+
