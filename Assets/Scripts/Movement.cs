@@ -36,6 +36,13 @@ public class Movement : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision collisionInfo){
+        if (collisionInfo.collider.tag == "Enemy")
+        {
+            manager.endConditions();
+        }
+    }
+
     void OnMove(InputValue value)
     {
         direction = value.Get<Vector2>();

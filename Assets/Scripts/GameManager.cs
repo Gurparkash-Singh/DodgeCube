@@ -19,19 +19,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Game Over Screen");
     }
 
-    public void OnCollisionEnter(Collision collisionInfo){
-        if (collisionInfo.collider.tag == "Enemy")
-        {
-            endConditions();
-        }
-    }
-
     public void endConditions()
     {
         if(gameHasEnded == false)
         {
             gameHasEnded = true;
-            Debug.Log("Game Over");
             StartCoroutine(WaitForFunction());
         }
     }
@@ -45,7 +37,6 @@ public class GameManager : MonoBehaviour
             {
                 Level.setLevel();
             }
-            Debug.Log("You Win!");
             SceneManager.LoadScene("win");
         }
     }
