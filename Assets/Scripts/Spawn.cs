@@ -14,11 +14,12 @@ public class Spawn : MonoBehaviour
     [SerializeField] private GameObject end;
     [SerializeField] private float timeToSpawn = 2f;
     [SerializeField] private float wave = 1f;
+    [SerializeField] private int baseTime;
     
     void Start()
     {
         time = Time.time;
-        endTime = time + (8 * level);
+        endTime = time + (baseTime * Level.currentLevel);
     }
     
     void Update()

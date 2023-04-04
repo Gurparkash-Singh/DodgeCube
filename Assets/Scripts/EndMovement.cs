@@ -2,8 +2,15 @@ using UnityEngine;
 
 public class EndMovement : MonoBehaviour
 {
+    private GameManager manager;
+    
     [SerializeField] private Rigidbody end;
     [SerializeField] private float forwardSpeed = 1000f;
+
+    void Start()
+    {
+        manager = FindObjectOfType<GameManager>();
+    }
 
     void FixedUpdate()
     {
@@ -11,6 +18,7 @@ public class EndMovement : MonoBehaviour
 
         if (transform.position.z <= -2)
         {
+            manager.endConditions();
             Destroy(gameObject);
         }
     }

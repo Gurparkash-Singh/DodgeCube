@@ -4,16 +4,21 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     private Vector2 direction;
+    private GameManager manager;
 
     [SerializeField] private Rigidbody player;
     [SerializeField] private float sideSpeed = 500f;
-    [SerializeField] private endgame fall;
+
+    void Start()
+    {
+        manager = FindObjectOfType<GameManager>();
+    }
 
     void Update()
     {
         if (transform.position.y <= -1)
         {
-            fall.endConditions();
+            manager.endConditions();
         }
     }
 
@@ -27,7 +32,7 @@ public class Movement : MonoBehaviour
     {
         if (col.tag == "End")
         {
-            Debug.Log("You Win!!!!");
+            manager.winConditions();
         }
     }
 
