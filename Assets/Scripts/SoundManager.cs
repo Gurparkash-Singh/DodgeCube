@@ -15,7 +15,8 @@ public class SoundManager : MonoBehaviour
 
   public void Back()
   {
-   SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
+   int previousLevel = PlayerPrefs.GetInt("previousLevel");
+        Application.LoadLevel(previousLevel);
   }
 
  
