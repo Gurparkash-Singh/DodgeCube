@@ -15,7 +15,9 @@ public class youwin : MonoBehaviour
     }
     public void next()
     {
+
         SceneManager.LoadScene("SampleScene");
+        
     }
 }
 

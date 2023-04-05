@@ -4,11 +4,11 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class Level
 {
-    private static int level = 1;
+    public static int level = 1;
 
     public static int currentLevel = 1;
 
-    private static string path = Application.persistentDataPath + "/level.cube";
+    public static string path = Application.persistentDataPath + "/level.cube";
 
     public static int getLevel()
     {
