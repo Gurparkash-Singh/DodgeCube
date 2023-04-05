@@ -5,12 +5,18 @@ public class LevelSelect : MonoBehaviour
 {
     [SerializeField] private AudioSource error;
 
-    public void level_1(){
+    public void selectLevel(int level){
 
-        // if statement pertruding to main character where if they have a value higher than the level value then they are transported to the new level
-        SceneManager.LoadScene("SampleScene");
-        //else statement that if that doesnt work then we get an error sound
-        error.Play();
+        bool selected = Level.setCurrentLevel(level);
+        if (selected)
+        {
+    
+            SceneManager.LoadScene("SampleScene");
+        }
+        else
+        {
+            error.Play(0);
+        }
     }
 
 }

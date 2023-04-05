@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         if(gameHasEnded == false)
         {
             gameHasEnded = true;
-            if (Level.currentLevel == Level.getLevel())
+            if (Level.getCurrentLevel() == Level.getLevel())
             {
                 Level.setLevel();
             }

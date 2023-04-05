@@ -15,7 +15,7 @@ public class youwin : MonoBehaviour
     }
     public void next()
     {
-
+        Level.setCurrentLevel(Level.getCurrentLevel() + 1);
         SceneManager.LoadScene("SampleScene");
         
     }

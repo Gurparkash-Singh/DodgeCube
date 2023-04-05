@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public static int level = 1;
-
     private bool stop = false;
     private float time;
     private float endTime;
@@ -19,7 +17,9 @@ public class Spawn : MonoBehaviour
     void Start()
     {
         time = Time.time;
-        endTime = time + (baseTime * Level.currentLevel);
+        endTime = time + (baseTime * Level.getCurrentLevel());
+        Debug.Log(Level.getLevel());
+        Debug.Log(Level.getCurrentLevel());
     }
     
     void Update()

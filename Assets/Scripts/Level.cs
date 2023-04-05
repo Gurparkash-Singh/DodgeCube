@@ -4,11 +4,11 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class Level
 {
-    public static int level = 1;
+    private static int level = 1;
 
-    public static int currentLevel = 1;
+    private static int currentLevel = 1;
 
-    public static string path = Application.persistentDataPath + "/level.cube";
+    private static string path = Application.persistentDataPath + "/level.cube";
 
     public static int getLevel()
     {
@@ -17,7 +17,28 @@ public static class Level
 
     public static void setLevel()
     {
-        level += 1;
+        if (level < 10)
+        {
+            level += 1;
+        }
+    }
+
+    public static int getCurrentLevel()
+    {
+        return currentLevel;
+    }
+
+    public static bool setCurrentLevel(int levelToSet)
+    {
+        if (levelToSet <= level)
+        {
+            currentLevel = levelToSet;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public static void saveGame()
