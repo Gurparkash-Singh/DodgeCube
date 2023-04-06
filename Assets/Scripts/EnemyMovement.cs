@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public Rigidbody enemy;
-    public float forwardSpeed = 500f;
+    public float forwardSpeed = 200f;
 
     // Update is called once per frame
     void FixedUpdate()

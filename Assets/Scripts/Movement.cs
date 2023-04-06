@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     private GameManager manager;
 
     [SerializeField] private Rigidbody player;
-    [SerializeField] private float sideSpeed = 350f;
+    [SerializeField] private float sideSpeed = 100f;
 
     void Start()
     {
